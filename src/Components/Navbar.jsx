@@ -12,7 +12,12 @@ function Navbar() {
              <ul className='md:flex justify-between gap-4 hidden'>
             {
                 navigationLinks.map((item) => (
-                   <li key={item.id} className='text-xl'><a href={item.link}>{item.title}</a></li>     
+                   <li key={item.id} className='relative text-xl group transition duration-300'>
+                    <a href={item.link} onClick={() => setActiveSection(item.id)}>{item.title}</a>
+                    <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-white
+                            transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100`}>                            
+                    </span>
+                   </li>     
                 ))
             }
           </ul>
