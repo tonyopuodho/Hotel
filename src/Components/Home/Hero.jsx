@@ -34,6 +34,23 @@ function Hero() {
                      style={{backgroundImage:`url(${item})`}}></div>
                 ))
             }
+            {/*content */}
+            <div className='relative z-30 flex items-center justify-center h-full'>
+                <div className='max-w-7xl md:w-[80%] mx-auto w-full p-2 font-serif flex justify-center items-center flex-col gap-2'>
+                    <div className='text-center'>
+                        <h1 className='text-white text-4xl md:text-6xl font-extrabold'>Welcome to Mara Hotel</h1>
+                        <h1 className='text-white text-4xl md:text-6xl font-extrabold'>Your luxury hotel for vacation</h1> 
+                    </div>
+                    <div className='flex flex-col md:flex-row gap-10 mt-10'>
+                      <button className='py-4 px-12 text-white bg-amber-950 text-xl
+                      outline-none
+                      rounded-2xl cursor-pointer'>Contact us</button>
+                      <button  className='py-4 px-12 text-white bg-transparent border text-xl
+                      outline-none transition-all duration-300 hover:bg-amber-950 
+                      rounded-2xl cursor-pointer'>Explore more</button>
+                    </div>                                  
+                </div>
+            </div>
         </div>
     </div>
   )
