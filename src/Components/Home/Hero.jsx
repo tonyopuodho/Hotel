@@ -5,7 +5,10 @@ function Hero() {
         "src/assets/jorg-angeli-1tyuLfDOnG0-unsplash.jpg",
         "src/assets/premium_photo-1676321688630-9558e7d2be10.jpg",
         "src/assets/sasha-kaunas-xEaAoizNFV8-unsplash.jpg",
-        "src/assets/the-anam-_twiIcIsp2s-unsplash.jpg"
+        "src/assets/the-anam-_twiIcIsp2s-unsplash.jpg",
+        "src/assets/gettyimages-175506580-612x612.jpg",
+        "src/assets/tf2023-b_standard.jpg",
+        "src/assets/photo-1555244162-803834f70033.jpg"
     ]
     const [imageIndex,setImageIndex] = useState(0)
     const [isVisible,setIsVisible] = useState(false)
