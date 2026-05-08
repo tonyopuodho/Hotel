@@ -1,9 +1,15 @@
 import React from 'react'
 import Footer from '../Home/Footer'
+import AboutHero from './AboutHero'
+import AboutContent from './AboutContent'
 
 function About() {
   return (
-    <div className=''></div>
+    <div>
+      <AboutHero/>
+      <AboutContent/>
+      <Footer/>
+    </div>
   )
 }
 
