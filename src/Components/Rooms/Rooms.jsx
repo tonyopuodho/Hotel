@@ -1,8 +1,13 @@
 import React from 'react'
+import RoomDetails from './RoomDetails'
+import Footer from '../Home/Footer'
 
 function Rooms() {
   return (
-    <div>Rooms</div>
+    <div>
+      <RoomDetails/>
+      <Footer/>
+    </div>
   )
 }
 
