@@ -4,7 +4,7 @@ import { FaCopyright, FaFacebook, FaPhone, FaTwitch, FaTwitter, FaWhatsapp } fro
 function Footer() {
   return (
     <div className='py-16 bg-gray-900'>
-        <div className='max-w-7xl md:w-[80%] mx-auto font-serif'>
+        <div className='max-w-7xl md:w-[80%] mx-auto font-serif px-2'>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
                 <h1 className='text-2xl font-extralight text-white'>Mara Hotel</h1>
                 <div className='flex flex-col gap-2'>

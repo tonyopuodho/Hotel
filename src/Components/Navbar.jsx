@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { navigationLinks } from './constants/links'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     const [isOpen,setIsOpen] = useState(false)
+    const [active,setActive] = useState("Home")
   return (
     <div className={`w-full h-[10%] fixed p-2 flex items-center bg-amber-950 shadow-md font-serif z-50`}>
         <div className={`max-w-7xl w-full md:w-[80%] mx-auto items-center text-white flex justify-between`}>
@@ -13,9 +15,10 @@ function Navbar() {
             {
                 navigationLinks.map((item) => (
                    <li key={item.id} className='relative text-xl group transition duration-300'>
-                    <a href={item.link} onClick={() => setActiveSection(item.id)}>{item.title}</a>
+                    <Link to={item.link} onClick={() => setActive(item.title)}>{item.title}</Link>
                     <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-white
-                            transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100`}>                            
+                            transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100
+                            ${active === item.title ? 'scale-x-100' : ''}`}>                            
                     </span>
                    </li>     
                 ))
@@ -34,7 +37,12 @@ function Navbar() {
             <ul className={`mt-20 ml-20`}>
                 {
                     navigationLinks.map((item) => (
-                        <li key={item.id} className={`text-2xl text-white mb-2`} onClick={() => setIsOpen(!isOpen)}><a href={item.link}>{item.title}</a></li>
+                        <li key={item.id} className={`text-2xl text-white mb-2 relative text-xl group transition duration-300`}  onClick ={() => setActive(item.title)}><Link to={item.link} onClick={() => {setIsOpen(!isOpen)}}>{item.title}
+                            <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-white
+                                transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-30
+                                ${active === item.title ? 'scale-x-30' : ''}`}>                            
+                            </span> 
+                        </Link></li>
                     ))
                 }
             </ul>

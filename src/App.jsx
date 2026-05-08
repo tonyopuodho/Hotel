@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router-dom"
+import { Outlet, Route, Router, Routes } from "react-router-dom"
 import Navbar from "./Components/Navbar"
 import Home from "./Components/Home/Home"
 import About from "./Components/About/About"
